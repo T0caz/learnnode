@@ -1,21 +1,21 @@
-let answer = 1 + 1;
-answer = 1 - 1;
-answer = 2 * 3;
-answer = 9 / 3;
-answer = 7 % 2;  
-answer = 2 ** 3;   
-console.log(answer);
-let num = 1;
-num = num + 1;
-num += 1;
-num -= 1;
-num *= 2;
-num /= 3;
-num %= 2;
-num **= 2;
-num++;
-num--;
-num = 1;
-num = Math.pow(3, 4);
-num = 0.1 + 0.2;s
-console.log(num);
+let text = `Hello`;
+text = text + `Karl`;
+console.log(text);
+text = `afrlgja`;
+text = "lkhfdlkgh";
+text = "Don`t use double quotes unless needed";
+text = `Don\`t use double\t quotes\n unless needed`;
+console.log(text);
+let name = `Karl`;
+let age = `17`;
+let sexuality = `Straight`;
+text = `Your name is ` + name + ` and you are ` + age + ` year old and your sexuality is ` + sexuality + `!`;
+console.log(text)
+text = `Your name 
+is ${name} and you
+ are ${age} 
+years oled and your 
+sexuality is ${sexuality}!`
+console.log(text);
+text = text.toUpperCase();
+console.log(text);
