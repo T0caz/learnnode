@@ -1,11 +1,18 @@
-let array = [1, 2, 3, 'asdas', true, [1, 2, 3]];
-console.log(array);
-console.log(array[2]);
-console.log(array[5][1]);
-array[3] = 'Hello';
-console.log(array);
-console.log(array.length);
-array.push(1, 3, 3, 'afsg', 'asfadf');
-console.log(array);
-let text = array.join('Uwu');
-console.log(text);
+let obj = {
+    name: 'Karl',
+    age: 17,
+    sexuality: 'SIRGEKUIPULK',
+    fruits: ['mango', 'watermelon', 'peach'],
+    cat: {
+        age: 9,
+        name: 'Zorro',
+        gender: 'Male'
+
+    }
+
+};
+
+console.log(obj);
+console.log(obj.name);
+console.log(obj.fruits[2]);
+console.log(obj.cat.name);
