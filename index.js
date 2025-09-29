@@ -1,24 +1,39 @@
-let time = Date.now();
-let num = 0;
-while(Date.now() < time+1000) {
-    num++;
-}
-console.log(num);
+let array = ['apple', 'pear', 'cherry', 'mango'];
 
-num = 10 ;
-while(num < 10) {
-    console.log('WHILE');
+for(fruit of array) {
+    console.log(fruit);
 }
 
-do {
-    console.log ('DO');
-} while(num < 10);
+array.forEach(fruit => {
+    console.log(fruit);
+})
 
-function recursion(num) {
-    if(num<10) {
-        console.log(num);
-        recursion(num+1);
-    }
+let obj = {
+    name: 'Karl',
+    age: 17,
+    color: 'Purple',
 }
 
-recursion
+for(key in obj) {
+    console.log(key);
+    console.log(obj[key]);
+}
+
+let capital = array.map(fruit => {
+    return fruit.toUpperCase();
+});
+
+console.log(capital);
+
+let aFruits = array.filter(fruit => {
+    return fruit.includes('a');
+});
+
+console.log(aFruits);
+
+let num = [1, 2, 3, 4, 5, 6, 7];
+
+let sum = nums.reduce((total, num) => {
+    return total + num;
+});
+console.log(sum);
