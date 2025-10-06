@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Karli GoonerKoobas</h1>
+   {% include 'src/views/partials/nav.njk'%}
+<div class="container">
+    {% block content %}
+    {% endblock %}
+    
+</div>
 </body>
 </html>
