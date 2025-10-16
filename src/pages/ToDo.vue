@@ -5,15 +5,15 @@ import ItemList from '../components/ItemList.vue';
 let newItem = ref('');
 let i = 1;
 let items = ref([
-    {id: i++, name:'Leib', isDone: false}, 
-    {id: i++, name:'Sai', isDone: false}, 
-    {id: i++, name:'Õlu', isDone: true}, 
+    {id: i++, name:'Leib', isDone: false},
+    {id: i++, name:'Sai', isDone: true},
+    {id: i++, name:'Õlu', isDone: false},
     {id: i++, name:'Viin', isDone: true},
 ]);
 let code = ref(404);
 function addItem(){
-    if(newItem.valuse.trim() !== '') {
-    items.value.push({id: i++, name: newItem.value.trim(), isDone: false});
+    if(newItem.value.trim() !== '') {
+        items.value.push({id: i++, name: newItem.value.trim(), isDone: false});   
     }
     newItem.value = '';
 }
@@ -46,6 +46,7 @@ let toDoItems = computed(() => {
         <ItemList :items="doneItems" title="Done Items"></ItemList>
         <ItemList :items="toDoItems" title="ToDo Items"></ItemList>
         
+
         <input v-model="code" class="input" type="number" placeholder="Enter Error code">
         <img :src="'https://http.cat/' + code">
     </div>
