@@ -16,7 +16,14 @@ onMounted(() => {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     marker = L.marker([lat, lng]).addTo(map);
+    var polygon = L.polygon([
+    [59.303239, 24.844324],
+    [59.303099, 24.844444],
+    [59.303142, 24.844718],
+    [59.303302, 24.844586]
+]).addTo(map);
 });
+
 
 watch(() => zoom, (zoom, oldZoom) => {
     console.log(zoom, oldZoom);
