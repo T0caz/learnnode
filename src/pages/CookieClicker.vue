@@ -11,7 +11,7 @@ setInterval(() => {
 
 let buildings = ref([
     {name: 'Cursor', icon: '👆🏻', cps: 1, price: 15, count: 0},
-    {name: 'Grandma',icon: '👵🏻', cps: 10, price: 100, count: 0},
+    {name: 'Grandma',icon: '👵🏻', cps: 5, price: 100, count: 0},
 ]);
 
 function buyBuilding(building) {
@@ -43,7 +43,7 @@ setInterval(() => {
 }, 2000);
 
 function clickGoldenCookie() {
-    cookies.value += 10000 * (1 + cps.value);
+    cookies.value += 100 * (1 + cps.value);
     goldenCookieVisible.value = false;
 }
 
