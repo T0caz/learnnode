@@ -20,24 +20,24 @@ function buyBuilding(building) {
         cps.value += building.cps;
         building.count++;
 
-        // Raise the price after each purchase
+       
         building.price = Math.round(building.price * 1.15 + building.count * 0.5);
     }
 }
 
-// Golden cookie state
+
 let goldenCookieVisible = ref(false);
 let goldenCookieX = ref(0);
 let goldenCookieY = ref(0);
 
-// Spawn a golden cookie randomly
+
 setInterval(() => {
     if (!goldenCookieVisible.value && Math.random() < 0.1) { 
         goldenCookieVisible.value = true;
         goldenCookieX.value = Math.random() * 300 + 50;
         goldenCookieY.value = Math.random() * 300 + 50;
 
-        // disappears after 4 sec
+     
         setTimeout(() => goldenCookieVisible.value = false, 4000);
     }
 }, 2000);
@@ -47,19 +47,19 @@ function clickGoldenCookie() {
     goldenCookieVisible.value = false;
 }
 
-// Critical click chance (10%)
+
 let critChance = 0.1;
 
-// Floating text list
+
 let floatTexts = ref([]);
 
-// Cookie click handler
+
 function clickCookie() {
     let isCrit = Math.random() < critChance;
     let amount = isCrit ? 5 : 1;
     cookies.value += amount;
 
-    // add animated floating text
+   
     floatTexts.value.push({
         id: Date.now(),
         text: isCrit ? `CRIT +${amount}!` : `+${amount}`,
@@ -67,7 +67,7 @@ function clickCookie() {
         y: Math.random() * 80 + 10,
     });
 
-    // remove after animation
+   
     setTimeout(() => {
         floatTexts.value = floatTexts.value.filter(t => t.id !== Date.now());
     }, 800);
@@ -103,7 +103,7 @@ let upgrades = ref([
     }
 ]);
 
-// Extra variables used by upgrades
+
 let clickBonus = ref(0);
 let goldenMultiplier = ref(1);
 
@@ -135,7 +135,7 @@ function buyUpgrade(upg) {
            <BuildingButton v-for="building in buildings" :building="building" :disabled="cookies<building.price" @click="buyBuilding(building)"></BuildingButton>
         </div>
     </div>
-    <!-- Golden cookie floating on screen -->
+    
 <div v-if="goldenCookieVisible"
     @click="clickGoldenCookie"
     :style="{
